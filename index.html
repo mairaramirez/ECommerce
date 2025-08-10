@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +8,60 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/inicio.css">
 </head>
+
 <body>
-    
-    <header>
-        <nav>
-            <ul>
-                <li> <a href="./index.html">Inicio</a> </li>
-                <li> <a href="./alta.html">Alta</a> </li>
-                <li> <a href="./carrito.html">Carrito</a> </li>
-                <li> <a href="./contacto.html">Contacto</a> </li>
-                <li> <a href="./nosotros.html">Nosotros</a> </li>
-                <li> <a href="./otra.html">Otra</a> </li>
-            </ul>
-        </nav>
-        <div>
-            <div id="logo">Logo</div>
-            <div id="barra-busqueda">
-                <form action="#">
-                    <label for="buscar">Buscar</label>
-                    <input type="text">
-                    <input type="submit" value="Buscar">
-                </form>
-            </div>
-            <div id="boton-carrito">C</div>
-        </div>
-    </header>
+
+<header class="site-header">
+  <nav class="nav">
+    <div class="container">
+      <div class="logo">SPORT</div>
+
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="alta.html">Alta</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="otra.html">Otra</a></li>
+      </ul>
+
+      <div class="nav-extra">
+        <form id="barra-busqueda" action="#">
+          <label for="buscar">Buscar</label>
+          <input id="buscar" type="text" placeholder="Producto...">
+          <button type="submit">Buscar</button>
+        </form>
+        <button id="boton-carrito" aria-label="Carrito">C</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
 
     <main>
-        <div class="section-cards">
+        <div class="promo-banner">
+            <div class="promo-texto">
+                <h2>¡GRAN LIQUIDACIÓN!</h2>
+                <p>HASTA 50% OFF EN INDUMENTARIA</p>
+                <a href="#" class="boton-cta">COMPRA AHORA</a>
+            </div>
+            <div class="promo-imagen">
+                <img src="assets/corredor.png" alt="Atleta corriendo">
+            </div>
+        </div>
+
+        <div class="section-cards" >
             <div class="section-cards-header">
                 <h1>Listado de Productos</h1>
-            </div>    
+            </div>
 
-            <!-- section*5>h3{Producto $}+img+p>lorem -->
-            <div class="section-cards-body"></div>
+            <!-- section*5>h3{Producto $}+img+p>lorem  " -->
+            <div class="section-cards-body" ></div>
         </div>
     </main>
 
     <footer>
-        <h3>Copyright 2025</h3>
+        <h3>© Copyright 2025</h3>
     </footer>
 
     <script src="js/productos.js"></script>
@@ -53,4 +69,5 @@
     <script src="js/main.js"></script>
 
 </body>
+
 </html>
