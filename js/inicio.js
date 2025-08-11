@@ -7,31 +7,52 @@
 //         funciones globales
 // -------------------------------------
 function representarCardsProductos() {
-    let cards = ''
-    
-    if(productos.length) {
-        for(let i=0; i<productos.length; i++) {
-            let producto = productos[i]
-            cards += `<section>
-                        <h3>${producto.nombre}</h3>
-                        <img src="${producto.foto}" alt="foto de ${producto.nombre}">
-                        <p><b>Precio:</b> $${producto.precio}</p>
-                        <p><b>Stock:</b> ${producto.stock}</p>
-                        <p><b>Marca:</b> ${producto.marca}</p>
-                        <p><b>Categoría:</b> ${producto.categoria}</p>
-                        <p><b>Detalles:</b> ${producto.detalles}</p>
-                        <br>
-                        <p><b style="color:gold;">Envío:</b> ${producto.envio? 'Si':'No'}</p>
-                      </section>`
-        }
-    }
-    else cards += '<h2>No se encontraron productos para mostrar</h2>'
+    let cards = '';
 
-    document.querySelector('.section-cards-body').innerHTML = cards
+    if (productos.length) {
+        for (let i = 0; i < productos.length; i++) {
+            let p = productos[i];
+
+            // Mostrar edades en formato "x / y" o "-"
+            let edades = '-';
+            if (p.edadDesde || p.edadHasta) {
+                edades = (p.edadDesde || '-') + ' / ' + (p.edadHasta || '-');
+            }
+
+            cards += `
+            <section>
+                <h3>${p.nombre}</h3>
+                <img src="${p.foto}" alt="foto de ${p.nombre}">
+                <p><b>Precio:</b> $${p.precio}</p>
+                <p  id="stock"><b>Stock:</b> ${p.stock}</p>
+                <p><b>Marca:</b > ${p.marca}</p>
+                <p id="categoria"><b>Categoría:</b> ${p.categoria}</p>
+                <p><b>Descripción:</b> ${p.descCorta || '-'}</p>
+                <p id="desLarga"> ${p.descLarga || '-'}</p>
+                <p id="edades"><b>Edades:</b> ${edades}</p>
+                <p><b style="color:gold;">Envío:</b> ${p.envio ? 'Sí' : 'No'}</p>
+                <br>
+                <button onclick="agregarAlCarrito('${p.nombre}')"id="comprar">Comprar</button>
+            </section>
+            `;
+        }
+    } else {
+        cards = '<h2>No se encontraron productos para mostrar</h2>';
+    }
+
+    document.querySelector('.section-cards-body').innerHTML = cards;
+}
+
+function agregarAlCarrito(nombreProducto) {
+    const confirmar = confirm(`¿Querés agregar "${nombreProducto}" al carrito?`);
+    if (confirmar) {
+        alert(`✅ "${nombreProducto}" agregado al carrito`);
+    } else {
+        console.log('Operación cancelada');
+    }
 }
 
 function start() {
-    console.warn(document.querySelector('title').textContent)
-
-    representarCardsProductos()
+    console.warn(document.querySelector('title').textContent);
+    representarCardsProductos();
 }
