@@ -64,10 +64,13 @@ main {
 }
 
 .boton-cta:hover {
-    background: rgb(72, 255, 0);
-    color: black;
-    font-size: large;
-    transform: scale(1-5, 1.5);
+    background: var(--primario);
+    color: var(--fondo);
+    border: 2px solid greenyellow;
+    font-size: xx-large;
+    transform: translateY(-10px);
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.61);
+
 }
 
 .promo-imagen {
@@ -77,7 +80,7 @@ main {
 }
 
 .promo-imagen img {
-    width: 26rem;
+    width: 30rem;
     height: auto;
     user-select: none;
     pointer-events: none;
@@ -148,8 +151,8 @@ section p {
 }
 
 #comprar:hover {
-    background: rgb(72, 255, 0);
-    color: black;
+    background: var(--primario);
+    color: var(--fondo);
     font-size: large;
     transform: scale(1-5, 1.5);
 }
@@ -157,6 +160,14 @@ section p {
 /*-------------------RESPONSIVO---------------------*/
 
 @media (max-width: 1200px) {
+    div h1 {
+        margin: 0;
+    }
+
+    .section-cards-header h1 {
+        color: #1C1C1C;
+        margin-bottom: 0;
+    }
 
     .promo-banner {
         display: flex;

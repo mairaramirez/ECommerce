@@ -1,6 +1,28 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 main {
     padding: 20px;
+}
+
+h1 {
+    margin: 20px;
+    text-shadow: 3px 1px 10px rgba(0, 0, 0, 0.61);
+    font-size: 3rem;
+    margin: 3rem;
+    text-align: center;
+    justify-content: center;
+}
+
+/*-------------------RESPONSIVO---------------------*/
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+
 }

@@ -14,7 +14,7 @@
     <header class="site-header">
         <nav class="nav">
             <div class="container">
-                <div class="logo">SPORT</div>
+                <div href="index.html" class="logo">SPORT</div>
 
                 <ul class="menu">
                     <li><a href="index.html">Inicio</a></li>
@@ -40,73 +40,78 @@
     <main>
         <h1>Alta de Productos</h1>
 
-        <form onsubmit="agregar(event)" class="alta-form" novalidate>
+        <form onsubmit="agregar(event)" class="alta-form">
             <!-- campo nombre -->
-            <div class="input-group">
+            <div class="input-grupal">
                 <label for="nombre">Nombre *</label>
-                <input id="nombre" name="nombre" type="text" required minlength="2" maxlength="60" />
+                <input class="requerido" id="nombre" name="nombre" type="text" required minlength="2" maxlength="60"
+                    required />
             </div>
 
             <!-- campo precio -->
-            <div class="input-group">
+            <div class="input-grupal">
                 <label for="precio">Precio *</label>
-                <input id="precio" name="precio" type="number" required min="0" step="0.01" />
+                <input class="requerido" id="precio" name="precio" type="number" required min="0" step="0.01"
+                    required />
             </div>
 
             <!-- campo stock -->
-            <div class="input-group">
+            <div class="input-grupal">
                 <label for="stock">Stock *</label>
-                <input id="stock" name="stock" type="number" required min="0" step="1" />
+                <input class="requerido" id="stock" name="stock" type="number" required min="0" step="1" required />
             </div>
 
             <!-- campo marca -->
-            <div class="input-group">
+            <div class="input-grupal">
                 <label for="marca">Marca *</label>
-                <input id="marca" name="marca" type="text" required minlength="2" maxlength="40" />
+                <input class="requerido" id="marca" name="marca" type="text" required minlength="2" maxlength="40"
+                    required />
             </div>
 
             <!-- campo categoria -->
-            <div class="input-group">
+            <div class="input-grupal">
                 <label for="categoria">Categoría *</label>
-                <input id="categoria" name="categoria" type="text" required minlength="2" maxlength="40" />
+                <input class="requerido" id="categoria" name="categoria" type="text" required minlength="2"
+                    maxlength="40" required />
             </div>
 
             <!-- descripción corta -->
-            <div class="input-group">
+            <div class="input-grupal">
                 <label for="descCorta">Descripción corta *</label>
-                <input id="descCorta" name="descCorta" type="text" required minlength="10" maxlength="140" />
+                <input class="requerido" id="descCorta" name="descCorta" type="text" required minlength="10"
+                    maxlength="140" required />
             </div>
 
             <!-- descripción larga -->
-            <div class="input-group">
+            <div class="input-grupal">
                 <label for="descLarga">Descripción larga</label>
                 <textarea id="descLarga" name="descLarga" rows="4" minlength="20" maxlength="600"></textarea>
             </div>
 
             <!-- envío sin cargo -->
-            <div class="input-group">
+            <div class="input-grupal">
                 <input id="envio" name="envio" type="checkbox" />
                 <label for="envio">Envío sin cargo</label>
             </div>
 
             <!-- edad desde / hasta -->
-            <div class="input-group">
+            <div class="input-grupal">
                 <label for="edadDesde">Edad desde</label>
                 <input id="edadDesde" name="edadDesde" type="number" min="0" max="120" step="1" />
             </div>
 
-            <div class="input-group">
+            <div class="input-grupal">
                 <label for="edadHasta">Edad hasta</label>
                 <input id="edadHasta" name="edadHasta" type="number" min="0" max="120" step="1" />
             </div>
 
             <!-- campo foto -->
-            <div class="input-group">
+            <div class="input-grupal">
                 <label for="foto">Foto (URL) *</label>
-                <input id="foto" name="foto" type="url" required placeholder="https://..." />
+                <input class="requerido" id="foto" name="foto" type="url" required placeholder="https://..." required />
             </div>
 
-            <button>Agregar</button>
+            <button type="submit">Agregar</button>
 
         </form>
 
@@ -125,8 +130,44 @@
 
     </main>
 
-    <footer>
-        <h3>Copyright 2025</h3>
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-logo">
+                <img src="assets/aptitud-fisica.png" alt="Logo SPORT" />
+                <h2 class="footer-letras">SPORT</h2>
+            </div>
+
+            <nav class="footer-nav">
+                <ul>
+                    <li><a class="footer-link" href="index.html">Inicio</a></li>
+                    <li><a class="footer-link" href="productos.html">Productos</a></li>
+                    <li><a class="footer-link" href="nosotros.html">Nosotros</a></li>
+                    <li><a class="footer-link" href="contacto.html">Contacto</a></li>
+                    <li><a class="footer-link" href="alta.html">Alta</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-contacto">
+                <p><strong>Email:</strong> contacto@sport.com</p>
+                <p><strong>Tel:</strong> +54 11 1234-5678</p>
+                <p><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
+            </div>
+
+            <div class="footer-redes">
+                <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="assets/social.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/tik-tok.png" alt="TikTok"></a>
+                <a href="#"><img src="assets/youtube.png" alt="YouTube"></a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>"Entrená con nosotros, alcanzá tu mejor versión."</p>
+            <p>&copy; 2025 SPORT - Todos los derechos reservados</p>
+        </div>
     </footer>
 
     <script src="js/productos.js"></script>

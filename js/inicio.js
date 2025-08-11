@@ -44,7 +44,7 @@ function representarCardsProductos() {
 }
 
 function agregarAlCarrito(nombreProducto) {
-    const confirmar = confirm(`¿Querés agregar "${nombreProducto}" al carrito?`);
+    const confirmar = confirm(`¿Desea agregar "${nombreProducto}" al carrito?`);
     if (confirmar) {
         alert(`✅ "${nombreProducto}" agregado al carrito`);
     } else {

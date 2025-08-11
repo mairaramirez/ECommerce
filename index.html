@@ -2,73 +2,109 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECommerce (inicio)</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/inicio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECommerce (inicio)</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/inicio.css">
 </head>
 
 <body>
 
-<header class="site-header">
-  <nav class="nav">
-    <div class="container">
-      <div class="logo">SPORT</div>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="container">
+        <div href="index.html" class="logo">SPORT</div>
 
-      <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="alta.html">Alta</a></li>
-        <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="otra.html">Otra</a></li>
-      </ul>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="alta.html">Alta</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="otra.html">Otra</a></li>
+        </ul>
 
-      <div class="nav-extra">
-        <form id="barra-busqueda" action="#">
-          <label for="buscar">Buscar</label>
-          <input id="buscar" type="text" placeholder="Producto...">
-          <button type="submit">Buscar</button>
-        </form>
-        <button id="boton-carrito" aria-label="Carrito">C</button>
+        <div class="nav-extra">
+          <form id="barra-busqueda" action="#">
+            <label for="buscar">Buscar</label>
+            <input id="buscar" type="text" placeholder="Producto...">
+            <button type="submit">Buscar</button>
+          </form>
+          <button id="boton-carrito" aria-label="Carrito">C</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <div class="promo-banner">
+      <div class="promo-texto">
+        <h2>¡GRAN LIQUIDACIÓN!</h2>
+        <p>HASTA 50% OFF EN INDUMENTARIA</p>
+        <a href="#" class="boton-cta">COMPRA AHORA</a>
+      </div>
+      <div class="promo-imagen">
+        <img src="assets/corredor.png" alt="Atleta corriendo">
       </div>
     </div>
-  </nav>
-</header>
 
+    <div class="section-cards">
+      <div class="section-cards-header">
+        <h1>Listado de Productos</h1>
+      </div>
 
-    <main>
-        <div class="promo-banner">
-            <div class="promo-texto">
-                <h2>¡GRAN LIQUIDACIÓN!</h2>
-                <p>HASTA 50% OFF EN INDUMENTARIA</p>
-                <a href="#" class="boton-cta">COMPRA AHORA</a>
-            </div>
-            <div class="promo-imagen">
-                <img src="assets/corredor.png" alt="Atleta corriendo">
-            </div>
-        </div>
+      <!-- section*5>h3{Producto $}+img+p>lorem  " -->
+      <div class="section-cards-body">
+      </div>
 
-        <div class="section-cards" >
-            <div class="section-cards-header">
-                <h1>Listado de Productos</h1>
-            </div>
+    </div>
+  </main>
 
-            <!-- section*5>h3{Producto $}+img+p>lorem  " -->
-            <div class="section-cards-body" >
-            </div>
-            
-        </div>
-    </main>
+  <!-- Footer-->
+  <footer class="footer">
+    <div class="footer-container">
 
-    <footer>
-        <h3>© Copyright 2025</h3>
-    </footer>
+      <div class="footer-logo">
+        <img src="assets/aptitud-fisica.png" alt="Logo SPORT" />
+        <h2 class="footer-letras">SPORT</h2>
+      </div>
 
-    <script src="js/productos.js"></script>
-    <script src="js/inicio.js"></script>
-    <script src="js/main.js"></script>
+      <nav class="footer-nav">
+        <ul>
+          <li><a class="footer-link" href="index.html">Inicio</a></li>
+          <li><a class="footer-link" href="productos.html">Productos</a></li>
+          <li><a class="footer-link" href="nosotros.html">Nosotros</a></li>
+          <li><a class="footer-link" href="contacto.html">Contacto</a></li>
+          <li><a class="footer-link" href="alta.html">Alta</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contacto">
+        <p><strong>Email:</strong> contacto@sport.com</p>
+        <p><strong>Tel:</strong> +54 11 1234-5678</p>
+        <p><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
+      </div>
+
+      <div class="footer-redes">
+        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="assets/social.png" alt="Instagram"></a>
+        <a href="#"><img src="assets/tik-tok.png" alt="TikTok"></a>
+        <a href="#"><img src="assets/youtube.png" alt="YouTube"></a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>"Entrená con nosotros, alcanzá tu mejor versión."</p>
+      <p>&copy; 2025 SPORT - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/productos.js"></script>
+  <script src="js/inicio.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 
